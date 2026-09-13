@@ -1,7 +1,7 @@
 const botoes = document.querySelectorAll(".botao-plano");
-const campoPlano = document.querySelectorAll("#plano");
-const formulario = document.querySelectorAll("#form-inscricao");
-const mensagem = document.querySelectorAll("#mensagem-inscricao");
+const campoPlano = document.querySelector("#plano");
+const formulario = document.querySelector("#form-inscricao");
+const mensagem = document.querySelector("#mensagem-inscricao");
 
 botoes.forEach(function (botao) {
     botao.addEventListener("click", function (){
@@ -13,5 +13,5 @@ botoes.forEach(function (botao) {
 formulario.addEventListener("submit", function (evento){
     evento.preventDefault();
     mensagem.textContent = 
-    "Formulário enviado!!"
+    "Teste concluído ! Dados não foram salvos nem enviados."
 });

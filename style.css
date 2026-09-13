@@ -7,7 +7,8 @@
     --cor-borda: #ffffff;
     --sombra-padrao: 0 4px 10px rgba(0, 0, 0, 0.15);
     --raio-borda: 14px;
-    --largura-maxima: 1100px
+    --largura-maxima: 1100px;
+    --cor-texto: #111;
 }
 * {
     box-sizing: border-box;
@@ -198,7 +199,7 @@ header img {
 #form-inscricao button {
     align-self: flex-start;
     padding: 14px 26px;
-    background-color: var(--cor-degrade-2);
+    background-color: var(--cor-branca);
     color: #111;
     border: none;
     border-radius: 10px;
