@@ -98,7 +98,7 @@
                 <li>Horario de acesso livre.</li>
                 <li>App exclusivo.</li>
             </ul>
-            <a href="#informacoes" class = "botao-plano">
+            <a href="#inscricao" class = "botao-plano" data-plano="basico">
                 Escolher Plano
             </a>
         </article>
@@ -115,7 +115,7 @@
                 <li>Horario de acesso livre.</li>
                 <li>App exclusivo.</li>
             </ul>
-            <a href="#informacoes" class = "botao-plano">
+            <a href="#inscricao" class = "botao-plano" data-plano="trimestral">
                 Escolher Plano
             </a>
         </article>
@@ -132,15 +132,43 @@
                 <li>Horario de acesso livre.</li>
                 <li>Maior economia entre todos os planos.</li>
             </ul>
-            <a href="#informacoes" class = "botao-plano">
+            <a href="#inscricao" class = "botao-plano" data-plano="anual">
                 Escolher Plano
             </a>
         </article>
 
     </div>
 </section>
+<section id="inscricao">
+    <h2>Inscreva-se na academia</h2>
+
+    <form id="form-inscricao">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome"
+        autocomplete="name" required>
+        
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email"
+        autocomplete="email" required>
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone"
+        autocomplete="tel" required>
+
+        <label for="plano">Escolha seu plano</label>
+        <select id="plano" name="plano" required>
+            <option value="">Selecione um plano</option>
+            <option value="basico">Básico - R$ 129,90/</option>
+            <option value="trimestral">Trimestral - 3x de R$ 159,90</option>
+            <option value="anual">Anual - 12x de R$139,90</option>
+        </select>
+
+        <button type="submit">Enviar Inscrição</button>
+        <p id="mensagem-inscricao" role="status"></p>
+    </form>
+</section>
 
 </main>
-
+<script src="academia.js"></script>
 </body>
 </html>

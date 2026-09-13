@@ -97,12 +97,12 @@ header img {
     border-color 0.3s ease,
     box-shadow 0.3s ease;
 }
-.plano-hover {
+.plano:hover {
     transform: translateY(-10px);
     border-color: var(--cor-degrade-2);
     box-shadow: 0 14px 30px rgb(255, 107, 0, 25%);
 }
-.planoh3 {
+.plano h3 {
     margin-top: 0;
     color: var(--cor-degrade-2);
     font-size: 1.6rem;
@@ -137,7 +137,97 @@ header img {
     text-decoration: none;
     transition: background-color 0.3s, transform 0.3s;
 }
-.botao-plano-hover {
+.botao-plano:hover {
     background-color: #ff8c23;
     transform: scale(1.03);
+}
+#horarios {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #111;
+    color: var(--cor-branca);
+}
+#inscricao {
+    margin: 40px auto;
+    padding: 35px;
+    background-color: #242424;
+    color: var(--cor-branca);
+    border: 1px solid #444;
+    border-radius: 20px;
+    box-shadow: var(--sombra-padrao);
+}
+#inscricao h2 {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #444;
+    color: var(--cor-degrade-2);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+}
+#form-inscricao {
+    display: flex;
+    flex-direction: column;
+}
+#form-inscricao label{
+    margin-bottom: 10px;
+    color: var(--cor-branca);
+    font-size: 1.1rem;
+    font-weight: 500;
+
+}
+
+#form-inscricao input,
+#form-inscricao select,
+#form-inscricao textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #111;
+    color: var(--cor-branca);
+    border: 1px solid #666;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    color-scheme: dark;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#form-inscricao button {
+    align-self: flex-start;
+    padding: 14px 26px;
+    background-color: var(--cor-degrade-2);
+    color: #111;
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+#form-inscricao button:hover {
+    background-color: var(--cor-degrade-2);
+}
+#form-inscricao button:focus-visible {
+    outline: 2px solid var(--cor-borda);
+    outline-offset: 4px;
+}
+#form-inscricao input,
+#form-inscricao select {
+    min-height: 52px;
+}
+#form-inscricao textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+#form-inscricao input:focus,
+#form-inscricao select:focus,
+#form-inscricao textarea:focus {
+    border-color: var(--cor-degrade-2);
+    outline: 2px solid var(--cor-degrade-2);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px rgba(255, 140, 0, 0.15);
 }
