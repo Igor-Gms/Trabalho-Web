@@ -2,131 +2,263 @@
     --cor-primaria: #d6fb01;
     --cor-degrade-2: #ff8c00;
     --cor-degrade-1: #014c1c;
-    --cor-preta:#000000;
+    --cor-fundo: #f8b074;
+    --cor-preta: #000000;
     --cor-branca: #f3f4f6;
     --cor-borda: #ffffff;
-    --sombra-padrao: 0 4px 10px rgba(0, 0, 0, 0.15);
+    --cor-texto: #1f2937;
+    --cor-texto-suave: #4b5563;
+    --sombra-padrao: 0 4px 12px rgba(0, 0, 0, 0.08);
     --raio-borda: 14px;
     --largura-maxima: 1100px;
-    --cor-texto: #111;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 html {
     scroll-behavior: smooth;
-    background-color: #d1d5db;
+    background-color: var(--cor-preta);
 }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+   background: linear-gradient(
+        180deg,
+        #000000 0%,
+        #000000 25%,
+        #301800 50%,
+        #874300 75%,
+        var(--cor-degrade-2) 100%
+    );
+    display: flow-root;
+}
+
 header {
     background: linear-gradient(180deg,
-            var(--cor-preta),
-            var(--cor-degrade-2));
+            var(--cor-degrade-2),
+            var(--cor-preta));
     padding: 50px 20px;
     text-align: center;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
     color: var(--cor-branca)
 }
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--cor-texto);
-    line-height: 1.6;
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
-main {
-    max-width: var(--largura-maxima);
-    margin: 40px auto;
-    padding: 0px 20px;
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
 }
+
 header img {
     width: auto;
     max-width: 99%;
     height: auto;
     border-radius: 12px;
     margin-bottom: 15px;
-    border: 3px solid #000000;
+    border: 3px solid var(--cor-preta);
     box-shadow: 0 5px 15px rgba(0, 0, 0,0.12);
 }
-#planos h2 {
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: var(--cor-branca);
+    color: var(--cor-preta);
+    padding: 10px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 999px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: var(--cor-degrade-2);
+    color: var(--cor-preta);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    max-width: var(--largura-maxima);
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: var(--cor-branca);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-padrao);
+}
+
+section h2 {
     color: var(--cor-degrade-2);
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+    text-align: center;
 }
-#planos > p {
-    color: #ffffff;
+
+section p {
+    color: var(--cor-texto-suave);
+    font-size: 1.05rem;
+    line-height: 1.7;
 }
-.plano ul {
-    list-style: none;
-    padding: 0;
+
+article {
+    background-color: var(--cor-borda);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--cor-degrade-2);
+    margin-bottom: 15px;
+    text-align: center;
 }
-.plano li::before {
-    content: "✓";
-    color: var(--cor-degrade-2);
-    font-weight: bold;
-    margin-right: 8px;
+
+article h3 {
+    color: var(--cor-preta);
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+}
+
+article p {
+    color: var(--cor-texto-suave);
+    font-size: 1rem;
+}
+
+table {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+thead {
+    background-color: var(--cor-degrade-2);
+    color: var(--cor-branca);
+}
+
+th {
+    padding: 14px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+    color: var(--cor-texto);
+}
+
+tbody tr:hover {
+    background-color: #fff3e6;
+    transition: background-color 0.2s ease;
 }
 #planos {
     border-radius: 20px;
     padding: 60px 20px;
-    box-sizing: border-box;
-    border: 1px solid #ddd;
+    border: 1px solid var(--cor-preta);
     border-top: 6px solid var(--cor-degrade-2);
     background-color: #242424;
     text-align: center;
-    color: #ffffff;
-
+    color: var(--cor-borda);
 }
+
+#planos h2 {
+    color: var(--cor-degrade-2);
+}
+
+#planos p {
+    color: var(--cor-branca);
+}
+
 .planos-container {
     display: grid;
-     grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     max-width: 1100px;
     margin: 35px auto 0;
 }
+
 .plano {
     display: flex;
     flex-direction: column;
     padding: 30px 25px;
     overflow: hidden;
-
-    color: #d1d5db;
+    color: var(--cor-branca);
     background-color: #111;
     border: 2px solid transparent;
     border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 20%);
-
-    transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .plano:hover {
     transform: translateY(-10px);
     border-color: var(--cor-degrade-2);
-    box-shadow: 0 14px 30px rgb(255, 107, 0, 25%);
+    box-shadow: 0 14px 30px rgba(255, 107, 0, 0.25);
 }
+
 .plano h3 {
     margin-top: 0;
     color: var(--cor-degrade-2);
     font-size: 1.6rem;
 }
-.plano strong{
+
+.plano strong {
     display: block;
     margin-top: 15px;
     color: var(--cor-degrade-2);
     font-size: 2rem;
 }
+
 .plano small {
     display: block;
     margin: 8px 0 20px;
     color: #bbb;
 }
+
 .plano ul {
     padding: 0;
     text-align: left;
     list-style: none;
 }
+
 .plano li {
     margin-bottom: 12px;
 }
+
+.plano li::before {
+    content: "✓ ";
+    color: var(--cor-degrade-2);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
 .botao-plano {
     display: block;
     margin-top: auto;
@@ -138,15 +270,10 @@ header img {
     text-decoration: none;
     transition: background-color 0.3s, transform 0.3s;
 }
+
 .botao-plano:hover {
-    background-color: #ff8c23;
+    background-color: var(--cor-degrade-2);
     transform: scale(1.03);
-}
-#horarios {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #111;
-    color: var(--cor-branca);
 }
 #inscricao {
     margin: 40px auto;
@@ -157,6 +284,7 @@ header img {
     border-radius: 20px;
     box-shadow: var(--sombra-padrao);
 }
+
 #inscricao h2 {
     margin-bottom: 25px;
     padding-bottom: 20px;
@@ -166,16 +294,18 @@ header img {
     font-weight: bold;
     text-align: left;
 }
+
 #form-inscricao {
     display: flex;
     flex-direction: column;
 }
-#form-inscricao label{
+
+#form-inscricao label {
     margin-bottom: 10px;
     color: var(--cor-branca);
     font-size: 1.1rem;
     font-weight: 500;
-
+    text-align: left;
 }
 
 #form-inscricao input,
@@ -196,6 +326,25 @@ header img {
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
+#form-inscricao input,
+#form-inscricao select {
+    min-height: 52px;
+}
+
+#form-inscricao textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+#form-inscricao input:focus,
+#form-inscricao select:focus,
+#form-inscricao textarea:focus {
+    border-color: var(--cor-degrade-2);
+    outline: 2px solid var(--cor-degrade-2);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px rgba(255, 140, 0, 0.15);
+}
+
 #form-inscricao button {
     align-self: flex-start;
     padding: 14px 26px;
@@ -209,26 +358,15 @@ header img {
     cursor: pointer;
     transition: background-color 0.2s;
 }
+
 #form-inscricao button:hover {
     background-color: var(--cor-degrade-2);
 }
+
 #form-inscricao button:focus-visible {
     outline: 2px solid var(--cor-borda);
     outline-offset: 4px;
 }
-#form-inscricao input,
-#form-inscricao select {
-    min-height: 52px;
-}
-#form-inscricao textarea {
-    min-height: 140px;
-    resize: vertical;
-}
-#form-inscricao input:focus,
-#form-inscricao select:focus,
-#form-inscricao textarea:focus {
-    border-color: var(--cor-degrade-2);
-    outline: 2px solid var(--cor-degrade-2);
-    outline-offset: 2px;
-    box-shadow: 0 0 0 5px rgba(255, 140, 0, 0.15);
+#mensagem-inscricao {
+    color: var(--cor-borda);
 }
