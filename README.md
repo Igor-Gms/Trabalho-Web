@@ -4,7 +4,7 @@
 
 ### Sua vida fitness começa aqui.
 
-Projeto acadêmico desenvolvido no **2º período de TADS**  
+Projeto acadêmico desenvolvido em grupo no **2º período de TADS**  
 para a disciplina de **Desenvolvimento Web**.
 
 **HTML5 · CSS3 · JavaScript**
@@ -68,3 +68,9 @@ Bordas arredondadas, sombras e efeitos ao passar o mouse complementam o visual.
 A academia, os planos e as informações apresentados são demonstrativos.
 
 </div>
+
+## 🤝 Contribuidores
+
+- [Ana Clara Dias](https://github.com/Anacldiaass)
+- [Guilherme Quintino](https://github.com/Game1254y)
+- [Matheus Italo](https://github.com/matheusix)
