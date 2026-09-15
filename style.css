@@ -1,5 +1,4 @@
 :root {
-    --cor-primaria: #d6fb01;
     --cor-degrade-2: #ff8c00;
     --cor-degrade-1: #014c1c;
     --cor-fundo: #f8b074;
@@ -51,7 +50,6 @@ header {
 
 header h1 {
     font-size: 2.5rem;
-    font-weight: bold;
     margin-bottom: 8px;
 }
 
@@ -272,7 +270,6 @@ tbody tr:hover {
 }
 
 .botao-plano:hover {
-    background-color: var(--cor-degrade-2);
     transform: scale(1.03);
 }
 #inscricao {
@@ -313,7 +310,6 @@ tbody tr:hover {
 #form-inscricao textarea {
     box-sizing: border-box;
     width: 100%;
-    min-width: 0;
     margin-bottom: 20px;
     padding: 15px;
     background-color: #111;
@@ -322,7 +318,6 @@ tbody tr:hover {
     border-radius: 10px;
     font-family: inherit;
     font-size: 1rem;
-    color-scheme: dark;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
